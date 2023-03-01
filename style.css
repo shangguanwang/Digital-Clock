@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    overflow:hidden;
+    background:conic-gradient(from -90deg at 25% 115%, #ff0000, #ff0066, #ff00cc, #cc00ff, #6600ff, #0000ff, #0000ff, #0000ff, #0000ff)
+}
+
+.container {
+    width: 95%;
+    height:100vh;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+
+.digitalClock {
+    width:fit-content;
+    margin:auto;
+    padding:40px;
+    border-radius:2px;
+    color:white;
+    background:rgba(0, 0, 0, 0.1);
+}
+
+.digitalClock h1 {
+    display:inline-block; /*make the content in a horizontal row */
+    margin:0 10px; /*separate the date and time */
+    font-weight:bold;
+    font-size:5rem;
+}
+
+.dateoftoday {
+    text-align: center;
+}
+
+/*adjust text size for smaller screen */
+@media(max-width:768px) {
+    #bar1, #bar2 {
+        display:none;
+    text-align:center;
+    width:100%;
+    }
+    .digitalClock h1 {
+        display:block; /*change to a column */
+    }
+}
+
+@media(max-width:480px) {
+    .digitalClock h1 {
+        font-size:4rem;
+    }
+}
