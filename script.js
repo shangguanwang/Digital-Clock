@@ -13,7 +13,7 @@ function calculateTime() {
     let dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
 
     hour = hour % 12;
-    hour = hour?hour:'12';
+    hour = hour?hour:'12'; /* if the hour is 0, return 12 instead */
     hour = hour<10 ? '0'+hour : hour; /*add a zero in the front for single-digit hour */
     minute = minute < 10 ? '0'+minute:minute;
 
